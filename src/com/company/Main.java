@@ -19,10 +19,12 @@ public class Main {
 //        double a = 1; // x^2 − 6x + 9 = 0 дискриминант равен 0
 //        double b = -6; // x^2 − 6x + 9 = 0
 //        double c = 9; // x^2 − 6x + 9 = 0
+//        double d = b * b - 4 * a * c
 
 //        double a = 5; // 5x^2 + 3x + 7 = 0 дискриминант отрицательный
 //        double b = 3; // 5x^2 + 3x + 7 = 0
 //        double c = 7; // 5x^2 + 3x + 7 = 0
+//        double d = b * b - 4 * a * c
 
         double a = 5, b = 3, c = 7, d = b * b - 4 * a * c; // дискриминант отрицательный
 
