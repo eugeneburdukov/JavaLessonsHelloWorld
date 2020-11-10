@@ -14,6 +14,7 @@ public class Main {
 //        double a = 1; // ax^2 − 8x + 12 = 0 дискриминант положительный, два решения
 //        double b = 8; // ax^2 − 8x + 12 = 0
 //        double c = 12; // ax^2 − 8x + 12 = 0
+//        double d = b * b - 4 * a * c
 
 //        double a = 1; // x^2 − 6x + 9 = 0 дискриминант равен 0
 //        double b = -6; // x^2 − 6x + 9 = 0
