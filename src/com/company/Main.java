@@ -19,7 +19,7 @@ public class Main {
         System.out.println(n1);
         int n2 = n / 10 % 10;
         System.out.println(n2);
-        int n3 = n % 10; // 935 / 10 = 93 93*10 = 930
+        int n3 = n % 10; // 935 / 10 = 93 93*10 = 930 //
         System.out.println(n3);
 
 
