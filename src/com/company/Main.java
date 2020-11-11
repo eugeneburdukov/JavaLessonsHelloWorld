@@ -31,7 +31,7 @@ public class Main {
         System.out.println("Решение квадратного уравнения, Дискриминант = " + d);
 
         if(d > 0) {
-            System.out.println("Дискримина нт положительный, уравнение имеет два корня:");
+            System.out.println("Дискримина  нт положительный, уравнение имеет два корня:");
             System.out.println("Первый корень = " + ((-b + Math.sqrt(d)) / (2 * a)));
             System.out.println("Второй корень = " + ((-b - Math.sqrt(d)) / (2 * a)));
         } else if(d == 0) {
