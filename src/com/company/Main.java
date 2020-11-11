@@ -1,8 +1,48 @@
 package com.company;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] lessons) {
+        /*
+        Создать программу, выводящую на экран случайно сгенерированное
+        трёхзначное натуральное число и его наибольшую цифру.
+         */
+        Random random1 = new Random();
+        int n;
+
+        n = random1.nextInt(900) + 100;
+        System.out.println(n);
+
+        int n1 = n / 100;
+        System.out.println(n1);
+        int n2 = n / 10 % 10;
+        System.out.println(n2);
+        int n3 = n % 10; // 935 / 10 = 93 93*10 = 930
+        System.out.println(n3);
+
+
+        //        System.out.println(n / 10 + n % 10);
+
+
+        /*
+        Создать программу, которая будет проверять попало ли случайно выбранное из отрезка [5;155]
+        целое число в интервал (25;100) и сообщать результат на экран.
+         */
+//        Random random1 = new Random();
+//        int n;
+//
+//        n = random1.nextInt(151) + 5;
+//        System.out.println(n);
+//
+//        if(n > 25 && n < 100) {
+//            System.out.println("Входит!");
+//        } else {
+//            System.out.println("Не входит!");
+//        }
+
+
 
         /*
         В три переменные a, b и c записаны три вещественных числа. Создать программу,
@@ -16,29 +56,31 @@ public class Main {
 //        double c = 12;  ax^2 − 8x + 12 = 0
 //        double d = b * b - 4 * a * c
 
-//        double a = 1; x^2 − 6x + 9 = 0 дискриминант равен 0
-//        double b = -6; x^2 − 6x + 9 = 0
-//        double c = 9; x^2 − 6x + 9 = 0
+//        double a = 1; // x^2 − 6x + 9 = 0 дискриминант равен 0
+//        double b = -6; // x^2 − 6x + 9 = 0
+//        double c = 9; // x^2 − 6x + 9 = 0
 //        double d = b * b - 4 * a * c
 
-//        double a = 5; 5x^2 + 3x + 7 = 0 дискриминант отрицательный
-//        double b = 3; 5x^2 + 3x + 7 = 0
-//        double c = 7; 5x^2 + 3x + 7 = 0
-//        double d = b * b - 4 * a * c
+//        double a = 5; // 5x^2 + 3x + 7 = 0 дискриминант отрицательный
+//        double b = 3; // 5x^2 + 3x + 7 = 0
+//        double c = 7; // 5x^2 + 3x + 7 = 0
+//        double d = // b * b - 4 * a * c
 
-        double a = 5, b = 3, c = 7, d = b * b - 4 * a * c; // дискриминант отрицательный
-
-        System.out.println("Решение квадратного уравнения, Дискриминант = " + d);
-
-        if(d > 0) {
-            System.out.println("Дискримина  нт положительный, уравнение имеет два корня:");
-            System.out.println("Первый корень = " + ((-b + Math.sqrt(d)) / (2 * a)));
-            System.out.println("Второй корень = " + ((-b - Math.sqrt(d)) / (2 * a)));
-        } else if(d == 0) {
-            System.out.println("Дискриминант равен 0, уравнение имеет один корень " + -b / (2 * a));
-        } else if (d < 0){
-            System.out.println("Нет корней.");
-        }
+//        double a = 1, b = 8, c = 12,  d;
+//
+//        d = b * b - 4 * a * c; // дискриминант отрицательный
+//
+//        System.out.println("Решение квадратного уравнения, Дискриминант = " + d);
+//
+//        if(d > 0) {
+//            System.out.println("Дискриминант положительный, уравнение имеет два корня:");
+//            System.out.println("Первый корень = " + ((-b + Math.sqrt(d)) / (2 * a)));
+//            System.out.println("Второй корень = " + ((-b - Math.sqrt(d)) / (2 * a)));
+//        } else if(d == 0) {
+//            System.out.println("Дискриминант равен 0, уравнение имеет один корень " + -b / (2 * a));
+//        } else {
+//            System.out.println("Нет корней.");
+//        }
 
 //        if(d > 0) {
 //            double x1 = (-b + Math.sqrt(d)) / (2 * a);
@@ -59,8 +101,8 @@ public class Main {
         Создать программу, выводящую на экран ближайшее к 10 из двух чисел, записанных в переменные m и n.
          */
 
-//        int m = 8;
-//        int n = 8;
+//        int m = 11;
+//        int n = 9;
 //
 //        int mDistance = 10 - m;
 //        int nDistance = 10 - n;
@@ -76,6 +118,8 @@ public class Main {
 //
 //        if(mDistance > nDistance) {
 //            System.out.println(n);
+//        } else if(mDistance == nDistance) {
+//            System.out.println("m = n");
 //        } else {
 //            System.out.println(m);
 //        }
@@ -327,6 +371,11 @@ _______ s = 990;
            <=
            ==
            !=
+
+           Логические операторы:
+           && оператор И(AND)           true && true && true
+           || оператор ИЛИ(OR)           true || true || true
+           ! оператор НЕ(NOT)           true OR true OR true
          */
 
 
