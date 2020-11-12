@@ -6,6 +6,13 @@ public class Main {
 
     public static void main(String[] lessons) {
         /*
+
+         */
+
+
+
+
+        /*
         Создать программу, выводящую на экран случайно сгенерированное
         трёхзначное натуральное число и его наибольшую цифру.
          */
@@ -19,8 +26,15 @@ public class Main {
         System.out.println(n1);
         int n2 = n / 10 % 10;
         System.out.println(n2);
-        int n3 = n % 10; // 935 / 10 = 93 93*10 = 930 //
+        int n3 = n % 10; // 935 / 10 = 93 93*10 = 930
         System.out.println(n3);
+        if(n1 > n2 && n1 > n3) {
+            System.out.println("Наибольшая цифра = " + n1);
+        } else if(n2 > n1 && n2 > n3) {
+            System.out.println("Наибольшая цифра = " + n2);
+        } else {
+            System.out.println("Наибольная цифра = "+ n3);
+        }
 
 
         //        System.out.println(n / 10 + n % 10);
