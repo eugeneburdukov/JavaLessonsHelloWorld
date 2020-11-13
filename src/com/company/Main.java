@@ -29,7 +29,7 @@ public class Main {
 
          */
 
-        int a = 3, b = 5, c = 4;
+        int a = 8, b = 7, c = 9;
 
         if (a > b && a > c) {
             if (c > b) {
