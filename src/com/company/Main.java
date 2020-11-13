@@ -10,31 +10,66 @@ public class Main {
         собой числа.
         Создать программу, которая переставит числа в переменных таким образом,
         чтобы при выводе на экран последовательность a, b и c оказалась строго возрастающей
-        1 123 c > a && c > b && b > a cba
-        2 132 b > a && b > c && c > a bca
-        3 213 c > a && c > b && a > b cab
-        4 231 b > a && b > c && a > c bac
-        5 312 a > b && a > c && c > b acb
-        6 321 a > b && a > c && b > c abc
+
+        c > a && c > b && b > a = a b c
+        b > a && b > c && c > a = a c b
+        c > a && c > b && a > b = b a c
+        b > a && b > c && a > c = c a b
+        a > b && a > c && c > b = b c a
+        a > b && a > c && b > c = c b a
+
+        a > b && a > c && c > b = b c a
+        a > b && a > c && b > c = c b a
+
+        b > a && b > c && c > a = a c b
+        b > a && b > c && a > c = c a b
+
+        c > a && c > b && a > b = b a c
+        c > a && c > b && b > a = a b c
+
          */
 
-        int a = 2, b = 5, c = 10;
+        int a = 3, b = 5, c = 4;
 
-        if (c > a && c > b && b > a) {
-            System.out.println(c + "" + b + "" + a);
-        } else if (b > a && b > c && c > a) {
-            System.out.println(b + "" + c + "" + a);
-        } else if (c > a && c > b && a > b) {
-            System.out.println(c + "" + a + "" + b);
-        } else if (b > a && b > c && a > c) {
-            System.out.println(b + "" + a + "" + c);
-        } else if (a > b && a > c && c > b) {
-            System.out.println(a + "" + c + "" + b);
-        } else if (a > b && a > c && b > c) {
-            System.out.println(a + "" + b + "" + c);
-        } else {
-            System.out.println("Error!");
+        if (a > b && a > c) {
+            if (c > b) {
+                System.out.println(b + "" + c + "" + a);
+            } else {
+                System.out.println(c + "" + b + "" + a);
+            }
         }
+        if (b > a && b > c) {
+            if (c > a) {
+                System.out.println(a + "" + c + "" + b);
+            } else {
+                System.out.println(c + "" + a + "" + b);
+            }
+        }
+        if (c > a && c > b) {
+            if (a > b) {
+                System.out.println(b + "" + a + "" + c);
+            } else {
+                System.out.println(a + "" + b + "" + c);
+            }
+        }
+
+//        if (c > a && c > b && b > a) {
+//            System.out.println(a + "" + b + "" + c);
+//        } else if (b > a && b > c && c > a) {
+//            System.out.println(a + "" + c + "" + b);
+//        } else if (c > a && c > b && a > b) {
+//            System.out.println(b + "" + a + "" + c);
+//        } else if (b > a && b > c && a > c) {
+//            System.out.println(c + "" + a + "" + b);
+//        } else if (a > b && a > c && c > b) {
+//            System.out.println(b + "" + c + "" + a);
+//        } else if (a > b && a > c && b > c) {
+//            System.out.println(c + "" + b + "" + a);
+//        } else {
+//            System.out.println("Error!");
+//        }
+
+
 //        /*
 //        Создать программу, выводящую на экран случайно сгенерированное
 //        трёхзначное натуральное число и его наибольшую цифру.
