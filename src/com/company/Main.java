@@ -42,7 +42,6 @@ public class Main {
 //        7.1. Иначе выводим ошибку
 //        8. Считываем второе число
 //        9. Вычисляем и выводит на экран сумму двух чисел
-//
 //         */
 //
 //        Scanner scanner = new Scanner(System.in);
@@ -53,7 +52,7 @@ public class Main {
 //            System.out.println("Введите второе число: ");
 //            if (scanner.hasNextInt()) {
 //                int n1 = scanner.nextInt();
-//                System.out.println("Cумма двух чисел = " + (n + n1));
+//                System.out.println("Сумма двух чисел = " + (n + n1));
 //            } else {
 //                System.out.println("Error! Второе число введено некорректно!");
 //            }
