@@ -1,10 +1,213 @@
 package com.company;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] lessons) {
+        /*
+        Создайте программу, выводящую на экран
+        все четырёхзначные числа последовательности 1000 1003 1006 1009 1012 1015 ...
+         */
+
+
+//        int n = 0;
+//
+//        while (n < 16) {
+//            System.out.print(n++ + " ");
+////            n++;
+//        }
+
+//        int x = 1;
+//
+////        x++; // x = x + 1;   x += 1;
+//
+//        int y = 2 + 3 + x++;
+//        System.out.println(y);
+//        System.out.println(x);
+
+//        /*
+//        Создать программу, которая будет вычислять и выводить на экран сумму двух целых чисел,
+//        введённых пользователем.
+//        Если пользователь некорректно введёт хотя бы одно из чисел, то сообщать об ошибке.
+//        1. Предлагаем пользователю ввести первое число
+//        2. Пользователь вводит первое число
+//        3. Проверяем целое ли первое число
+//        3.1. Иначе выводим ошибку
+//        4. Считываем первое число
+//        5. Предлагаем пользователю ввести второе число
+//        6. Пользователь вводит второе число
+//        7. Проверяем целое ли второе число
+//        7.1. Иначе выводим ошибку
+//        8. Считываем второе число
+//        9. Вычисляем и выводит на экран сумму двух чисел
+//
+//         */
+//
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println("Введите первое число: ");
+//        if (scanner.hasNextInt()) {
+//            int n = scanner.nextInt();
+//            System.out.println("Введите второе число: ");
+//            if (scanner.hasNextInt()) {
+//                int n1 = scanner.nextInt();
+//                System.out.println("Cумма двух чисел = " + (n + n1));
+//            } else {
+//                System.out.println("Error! Второе число введено некорректно!");
+//            }
+//        } else {
+//            System.out.println("Error! Первое число введено некорректно!");
+//        }
+
+//        /*
+//        Создать программу, которая будет сообщать, является ли целое число, введённое пользователем,
+//        чётным или нечётным. Если пользователь введёт не целое число, то сообщать ему об ошибке.
+//         */
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Введите целое число: ");
+//        if (scanner.hasNextInt()) {
+//            int n = scanner.nextInt();
+//
+//            System.out.println(n);
+//            if (n % 2 == 0) {
+//                System.out.print("число " + n + " четное");
+//            } else {
+//                System.out.print("число " + n + " нечетное");
+//            }
+//        } else {
+//            System.out.println("Ошибка! Не целое число!");
+//        }
+
+
+//        int month = 7;
+//
+//        switch (month) {
+//            case 1:
+//                System.out.println("January");
+////                break;
+//            case 2:
+//                System.out.println("February");
+////                break;
+//            case 3:
+//                System.out.println("March");
+////                break;
+//            case 4:
+//                System.out.println("April");
+////                break;
+//            case 5:
+//                System.out.println("May");
+////                break;
+//            case 6:
+//                System.out.println("June");
+////                break;
+//            case 7:
+//                System.out.println("July");
+////                break;
+//            case 8:
+//                System.out.println("August");
+////                break;
+//            case 9:
+//                System.out.println("September");
+////                break;
+//            case 10:
+//                System.out.println("October");
+////                break;
+//            case 11:
+//                System.out.println("November");
+////                break;
+//            case 12:
+//                System.out.println("December");
+////                break;
+////            default:
+////                System.out.println("Вы ввели некорректное число - " + month);
+//        }
+
+        /*
+        Дан исходный код программы:
+    double a = -3.0;
+    a = 2 + a; // a = 2 - 3.0 = -1.0
+    if (3 > 2 || 3 > 2 && false) { true
+      System.out.println("4"+a); // 4-1.0
+    } else {
+      System.out.println(-a+"4"); // 1.04
+    }
+Какой тип данных из набора boolean, int, double нужно подставить вместо прочерка,
+чтобы программа компилировалась корректно?
+Что выведется на экран в результате работы представленной выше программы?
+         */
+//        double a = -3.0;
+//        a = 2 + a; // a = 2 - 3.0 = -1.0
+//        if (2 > 3 || 3 > 2 && false) { // true
+//            System.out.println("4"+a); // 4-1.0
+//        } else {
+//            System.out.println(-a+"4"); // 1.04
+//        }
+
+        /*
+        Дан исходный код программы:
+    double b = 5.0;
+    b = b*2;
+    if (b > 10 || b < -10) { // false
+      System.out.println("12"+0+4); // 124
+    } else {
+      System.out.println(0+4+"12"); // 412
+    }
+Какой тип данных из набора boolean, int, double нужно подставить вместо прочерка,
+чтобы программа компилировалась корректно?
+Что выведется на экран в результате работы представленной выше программы?
+         */
+//        double b = 6.0;
+//        b = b*2;
+//        if (b > 10 || b < -10) { // false
+//            System.out.println("12"+0+4); // 1204
+//        } else {
+//            System.out.println(0+4+"12"); // 412
+//        }
+
+
+        /*
+        Дан исходный код программы:
+    boolean a = 5 > 3;
+    if (a || (5+3)*2 < 16 ) { // true || false
+      System.out.println(4+"12"+2); // 414
+    } else {
+      System.out.println(2+12*2); // 26
+    }
+Какой тип данных из набора boolean, int, double нужно подставить вместо прочерка,
+ чтобы программа компилировалась корректно?
+Что выведется на экран в результате работы представленной выше программы?
+         */
+
+//        boolean a = 5 == 3;
+//        if (a || (5+3)*2 < 16 ) { // true || false
+//            System.out.println(4+"12"+2); // 4122
+//        } else {
+//            System.out.println(2+12*2); // 26
+//        }
+
+        /*
+        Дан исходный код программы:
+    _____ a = 0 == 8%2;
+    if (a || (a && false)) {
+      System.out.println((1+1.5)+"2"); // 2.5 + 2 = 2.52
+    } else {
+    System.out.println(3+"a"+"2"+a); // 3a2a
+    }
+Какой тип данных из набора boolean, int, double нужно подставить вместо прочерка,
+чтобы программа компилировалась корректно?
+Что выведется на экран в результате работы представленной выше программы?
+         */
+
+//        boolean a = 0 == 9%2;
+//        if (a || (a && false)) {
+//            System.out.println((1+1.5)+"2"); // 2.5 + 2 = 2.52
+//        } else {
+//            System.out.println(3+"a"+"2"+a); // 3a2false
+//        }
+
         /*
         В три переменные a, b и c явно записаны программистом три целых попарно неравных между
         собой числа.
@@ -29,30 +232,27 @@ public class Main {
 
          */
 
-        int a = 8, b = 7, c = 9;
-
-        if (a > b && a > c) {
-            if (c > b) {
-                System.out.println(b + "" + c + "" + a);
-            } else {
-                System.out.println(c + "" + b + "" + a);
-            }
-        }
-        if (b > a && b > c) {
-            if (c > a) {
-                System.out.println(a + "" + c + "" + b);
-            } else {
-                System.out.println(c + "" + a + "" + b);
-            }
-        }
-        if (c > a && c > b) {
-            if (a > b) {
-                System.out.println(b + "" + a + "" + c);
-            } else {
-                System.out.println(a + "" + b + "" + c);
-            }
-        }
-
+//        int a = 9, b = 8, c = 7;
+//
+//        if (a > b && a > c) {
+//            if (c > b) {
+//                System.out.println(b + "" + c + "" + a);
+//            } else {
+//                System.out.println(c + "" + b + "" + a);
+//            }
+//        } else if (b > a && b > c) {
+//            if (c > a) {
+//                System.out.println(a + "" + c + "" + b);
+//            } else {
+//                System.out.println(c + "" + a + "" + b);
+//            }
+//        } else {
+//            if (a > b) {
+//                System.out.println(b + "" + a + "" + c);
+//            } else {
+//                System.out.println(a + "" + b + "" + c);
+//            }
+//        }
 //        if (c > a && c > b && b > a) {
 //            System.out.println(a + "" + b + "" + c);
 //        } else if (b > a && b > c && c > a) {
