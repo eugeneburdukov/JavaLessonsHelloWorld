@@ -7,14 +7,135 @@ public class Main {
 
     public static void main(String[] lessons) {
         /*
+        Выведите на экран первые 11 членов последовательности Фибоначчи. Напоминаем, что первый член и
+        второй члены последовательности равны единицам, а каждый следующий — сумме двух предыдущих.
+         */
+
+        //  1  1  2  3  5  8  13  21  34  55  89
+        // 2 = 1 + 1
+        // 3 = 2 + 1
+        // 5 = 2 + 3
+
+        int first = 1, second = 1, third, counter = 0;
+
+        System.out.print("1)" + first + " " + "2)" + second + " ");
+
+        while (counter < 9) {
+            third = first + second;
+            System.out.print(counter + 3 + ") " + third + " ");
+            first = second;
+            second = third;
+            counter++;
+        }
+
+//        for (int i = 0; i < 12; i++){
+//            third = first + second;
+//            System.out.print(third + " ");
+//            first = second;
+//            second = third;
+//        }
+
+        /*
+        Для введённого пользователем с клавиатуры натурального числа посчитайте сумму
+        всех его цифр (заранее не известно сколько цифр будет в числе).
+         */
+
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Введите натуральное число: ");
+//        int n = scanner.nextInt();
+//        int result = 0;
+//
+//        for (int i = 0; n > 0; i++) {
+//            result = result + n % 10;
+//            n = n / 10;
+//        }
+
+//        System.out.println(result);
+
+//        for (;;) { // cредний раздел по-умолчанию true
+//            System.out.println("Тест");
+//        }
+//        // что делает while
+
+        /*
+        Проверьте, является ли введённое пользователем с клавиатуры
+        натуральное число — простым. Постарайтесь не выполнять лишних действий
+        (например, после того, как вы нашли хотя бы один нетривиальный делитель уже ясно,
+        что число составное и проверку продолжать не нужно). Также учтите, что наименьший
+        делитель натурального числа n, если он вообще имеется,
+            обязательно располагается в отрезке [2; √n].
+         */
+//
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Введите целое число: ");
+//        int n = scanner.nextInt();
+//
+//        for (int i = 2, stop = (int) Math.sqrt(n); i <= stop; i++) {
+//            if (i == stop) {
+//                System.out.print("Число простое!");
+//                break;
+//            }
+//            if (n % i == 0) {
+//                System.out.println("Число составное!");
+//                break;
+//            }
+//        }
+
+
+////        int i = (int) Math.sqrt(n);
+//        int i = n - 1;
+//
+//        while (i >= 1) {
+//            if (n % i == 0 && i != 1) {
+//                System.out.print("Число составное!");
+//                break;
+//            }
+//            if (i == 1) {
+//                System.out.print("Число простое!");
+//            }
+//            i--;
+//        }
+
+
+
+        /*
         Выведите на экран все положительные делители натурального числа,
         введённого пользователем с клавиатуры.
          */
+        //        System.out.println(n % 2);
+        //        System.out.println(n % 5);
 
-        int n = 10;
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Введите целое число: ");
+//        int n = scanner.nextInt();
+//
+//        for (int i = 2; i < n; i++) {
+//            if (n % i == 0) {
+//                System.out.print(i + " ");
+//            }
+//        }
 
+//        int i = n - 1;
+//
+//        while (i > 1) {
+//            if(n % i == 0){
+//                System.out.print(i + " ");
+//            }
+//            i--;
+//        }
 
-
+//        int n = 10;
+//        int i = n - 1;
+//
+//        while (i > 1) {
+//            if(n % i == 0){
+//                System.out.print(i + " ");
+//            }
+//            i--;
+//        }
 
         /*
         Создайте программу, вычисляющую факториал натурального числа n,
