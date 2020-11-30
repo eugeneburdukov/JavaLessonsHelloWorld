@@ -6,6 +6,130 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] lessons) {
+        /*
+        Загадать случайно 100 целых чисел в диапазоне от -100 до 100. Вычислить процент положительных чисел,
+        процент отрицательных чисел и процент нулей. Вычислить процент чётных чисел и процент нечётных.
+         */
+
+
+
+        /*
+        Вывести на экран таблицу умножения (таблицу Пифагора).
+         */
+
+        for (int i = 2; i < 10; i++) {
+            for (int j = 2; j < 10; j++) {
+                System.out.println(i + " x " + j + " = " + i * j);
+            }
+        }
+
+        /*
+Палиндром - цифры.
+- найти максимальное палиндромное число из произведения всех пар возможных трехзначных (пятизначных)
+чисел, а также выводить и сами множители (913 x 993 = 906609).
+- оптимизировать программу так чтобы избежать повторяющихся операций (минимальное количество итераций - направление).
+Палиндром – число, которое читается одинаково в обоих направлениях до середины (например 90609 или 906609).
+         */
+
+//        int maxPalindrom = 0;
+//        int mult1 = 0;
+//        int mult2 = 0;
+//        int iterationNumber = 0; // 810000 // 77407
+//
+//        for (int i = 999; i >= 100; i--) {
+//            boolean flag = true;
+//            for (int j = 999; j >= 100; j--) {
+//                iterationNumber++;
+//                int mult = i * j;                     // 913 x 993 = 906609     993 x 913 = 906609
+//                int n1 = mult / 100000;
+//                int n2 = mult / 10000 % 10;
+//                int n3 = mult / 1000 % 10;
+//                int n4 = mult / 100 % 10;
+//                int n5 = mult / 10 % 10;
+//                int n6 = mult % 10;
+//                if (n1 != 0 && n1 == n6 && n2 == n5 && n3 == n4 && mult >= maxPalindrom) {
+//                    mult1 = i;
+//                    mult2 = j;
+//                    if (mult == maxPalindrom) {
+//                        flag = false;
+//                        break;
+//                    }
+//                    maxPalindrom = mult;
+//                }
+//            }
+//            if (!flag) {    // !flag   == flag == false
+//                break;
+//            }
+//        }
+//
+//        System.out.println(mult1 + " x " + mult2 + " = " + maxPalindrom);
+//        System.out.println(iterationNumber);
+
+//        int counter = 0;
+//
+//        for (int i = 999999; i > 1099; i--) {
+//            int n1 = i / 100000;
+//            int n2 = i / 10000 % 10;
+//            int n3 = i / 1000 % 10;
+//            int n4 = i / 100 % 10;
+//            int n5 = i / 10 % 10;
+//            int n6 = i % 10;
+//            if (n1 == n6 && n2 == n5 && n3 == n4) {
+//                for (int j = 1001; j < i; j--) {
+//                    if (i % j == 0) {
+//                        System.out.println(j + " x " + i / j + " = " + String.format("%06d", i));
+//                        break;
+//                    }
+//                }
+//            }
+//        }
+//
+//        System.out.println("Количество палиндромов = " + counter);
+
+//        int counter = 0;
+//
+//        for (int i = 999999; i > 1099; i--) {
+//            int n1 = i / 100000;
+//            int n2 = i / 10000 % 10;
+//            int n3 = i / 1000 % 10;
+//            int n4 = i / 100 % 10;
+//            int n5 = i / 10 % 10;
+//            int n6 = i % 10;
+//            if (n1 == n6 && n2 == n5 && n3 == n4) {
+//                System.out.println(i);
+//                counter++;
+//            }
+//        }
+//
+//        System.out.println("Количество палиндромов = " + counter);
+
+//        int n = 123456;
+//
+//        n1 = n6 = n / 100000 = n % 10
+//                n2 = n5 = n / 10000 % 10 = n / 10 % 10
+//                        n3 = n4 = n / 1000 % 10 = n / 100 % 10
+//
+//        int n1 = n / 100000;
+//        System.out.println(n1);
+//
+//        int n2 = n / 10000 % 10;
+//        System.out.println(n2);
+//
+//        int n3 = n / 1000 % 10;
+//        System.out.println(n3);
+//
+//        int n4 = n / 100 % 10;
+//        System.out.println(n4);
+//
+//        int n5 = n / 10 % 10;
+//        System.out.println(n5);
+//
+//        int n6 = n % 10;
+//        System.out.println(n6);
+
+
+
+
                 /*
                 Задача "Суеверные военные"
         В американской армии считается несчастливым число 13, а в японской — 4.
@@ -15,18 +139,41 @@ public class Main {
         и каждая боевая машина имеет номер от 00001 до 99999, то сколько всего номеров придётся исключить?
                  */
 
-        int count = 0;
+//        int count = 0;
+//
+//        for (int i = 4; i < 100000; i++) {  // (int i = 4; i < 100000; i++); 13134
+//            for (int j = i; j > 0; j = j / 10) {
+//                if (j % 10 == 4 || i % 100 == 13) { // || i % 100 == 13
+////                    System.out.printf("%05d\n", i);
+//                    count++;
+//                    break;
+//                }
+//            }
+//        }
+//        System.out.println(count);
 
-        for (int i = 4; i < 100000; i++) {
-            for (int j = i; j > 0; j = j / 10) {
-                if (j % 10 == 4 || j % 100 == 13) {
-                    count++;
-                    break;
-                }
-            }
-        }
 
-        System.out.println(count);
+//        int count1 = 0;
+//        int count2 = 0;
+//
+//        for (int i = 61324; i < 61325; i++) {  // (int i = 4; i < 100000; i++); 13134
+//            for (int j = i; j > 0; j = j / 10) {
+//                if (j % 10 == 4) {
+////                    System.out.printf("%05d\n", i);
+//                    count1++;
+//                    break;
+//                }
+//            }
+//            for (int k = i; k > 0; k = k / 10) {
+//                if (k % 100 == 13) {
+////                    System.out.printf("%05d\n", i);
+//                    count2++;
+//                    break;
+//                }
+//            }
+//        }
+//
+//        System.out.println(count1 + count2);
 
 
         /*
