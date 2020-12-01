@@ -11,25 +11,6 @@ public class Main {
         процент отрицательных чисел и процент нулей. Вычислить процент чётных чисел и процент нечётных.
          */
 
-        // Random random1 = new Random();
-        // int n;
-        //
-        // n = random1.nextInt(900) + 100;
-        //To get a random number between a set range with min and max:
-        //random.nextInt(30 + 10) - 10;
-        //// max = 30; min = -10;
-
-        //random.nextInt(100 + 10) - 10;
-        //
-
-        Random random = new Random();
-        int n = 0;
-
-        for (int i = 0; i < 100000; i++) {
-            n = random.nextInt(100 + 100) - 100;
-            System.out.println(n + " ");
-        }
-
 //        int counterEven = 0;
 //        int counterOdd = 0;
 //        int positive = 0;
@@ -39,7 +20,7 @@ public class Main {
 //        int n;
 //
 //        for (int i = 0; i < 100; i++) {
-//            n = random.nextInt(100 + 100) - 100;
+//            n = random.nextInt(100 + 1) - 100;
 //
 //            if (n % 2 == 0) {
 //                counterEven++;
@@ -61,17 +42,52 @@ public class Main {
 //                "Количество отрицательных = " + negative + "\n" +
 //                "Количество нулей = " + zero);
 
+// Random random1 = new Random();
+// int n;
+//
+// n = random1.nextInt(900) + 100;
+//To get a random number between a set range with min and max:
+//random.nextInt(30 + 10) - 10;
+//// max = 30; min = -10;
+
+//random.nextInt(100 + 10) - 10;
+//
+
+//        Random random = new Random();
+//        int n;
+//        int max = 0;
+//        int min = 0;
+//
+//        for (int i = 0; i < 10000; i++) {
+//            n = random.nextInt(101 + 100) - 100;
+//            if (n >= max) {
+//                max = n;
+//            }
+//            if (n < min) {
+//                min = n;
+//            }
+//        }
+//
+//        System.out.println("Нижняя граница = " + min + "\n"
+//                + "Верхняя граница = "+ max);
+
+
+//        for (int i = 100; i > 0; --i) {
+//            int run = new Random().nextInt(200);
+//            System.out.println(run - 100);
+//        }
+
         /*
         Вывести на экран таблицу умножения (таблицу Пифагора).
          */
 
-//        for (int i = 1; i < 10; i++) {
-//            System.out.print(i + " ");
-//            for (int j = 1; j < 10; j++) {
-//                System.out.print(i * j + " ");
-//            }
-//            System.out.println();
-//        }
+        for (int i = 1; i < 10; i++) {
+            System.out.print(i + " ");
+            for (int j = 1; j < 10; j++) {
+                System.out.print(i * j + " ");
+            }
+            System.out.println();
+        }
 
 //        for (int i = 2; i < 10; i++) {
 //            for (int j = 2; j < 10; j++) {
@@ -417,10 +433,10 @@ public class Main {
         второй члены последовательности равны единицам, а каждый следующий — сумме двух предыдущих.
          */
 
-        //  1  1  2  3  5  8  13  21  34  55  89
-        // 2 = 1 + 1
-        // 3 = 2 + 1
-        // 5 = 2 + 3
+//  1  1  2  3  5  8  13  21  34  55  89
+// 2 = 1 + 1
+// 3 = 2 + 1
+// 5 = 2 + 3
 
 //        int first = 1, second = 1, counter = 0;
 //
@@ -516,8 +532,8 @@ public class Main {
         Выведите на экран все положительные делители натурального числа,
         введённого пользователем с клавиатуры.
          */
-        //        System.out.println(n % 2);
-        //        System.out.println(n % 5);
+//        System.out.println(n % 2);
+//        System.out.println(n % 5);
 
 //        Scanner scanner = new Scanner(System.in);
 //
@@ -963,7 +979,7 @@ public class Main {
 //        }
 
 
-        //        System.out.println(n / 10 + n % 10);
+//        System.out.println(n / 10 + n % 10);
 
 
         /*
@@ -1065,9 +1081,9 @@ public class Main {
 //        }
 
 
-        // 10 - - 1 = 11
-        // 10 - 9 = 1
-        // 10 - 30 = -20
+// 10 - - 1 = 11
+// 10 - 9 = 1
+// 10 - 30 = -20
 
 
 
@@ -1317,18 +1333,18 @@ _______ s = 990;
          */
 
 
-        // todo строчный комментарий
-        /*
+// todo строчный комментарий
+/*
 
 
 
-         */
+ */
 
-        /*
-         *
-         *
-         *
-         */
+/*
+ *
+ *
+ *
+ */
 //        int z, a = 3, b, c = 6;
 //        int x = 3;
 //        int y = 5;
@@ -1336,4 +1352,4 @@ _______ s = 990;
 //
 //        System.out.println(z);
     }
-}
+            }
