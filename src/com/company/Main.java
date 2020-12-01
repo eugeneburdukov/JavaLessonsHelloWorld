@@ -22,36 +22,44 @@ public class Main {
         //random.nextInt(100 + 10) - 10;
         //
 
-        int counterEven = 0;
-        int counterOdd = 0;
-        int positive = 0;
-        int negative = 0;
-        int zero = 0;
         Random random = new Random();
-        int n;
+        int n = 0;
 
-        for (int i = 0; i < 100; i++) {
-            n = random.nextInt(100 + 10) - 10;
-
-            if (n % 2 == 0) {
-                counterEven++;
-            } else {
-                counterOdd++;
-            }
-            if (n > 0) {
-                positive++;
-            } else if (n < 0) {
-                negative++;
-            } else {
-                zero++;
-            }
+        for (int i = 0; i < 100000; i++) {
+            n = random.nextInt(100 + 100) - 100;
+            System.out.println(n + " ");
         }
 
-        System.out.printf("Количество четных = " + counterEven + "\n" +
-                "Количество нечетных " + counterOdd + "\n" +
-                "Количество положительных = " + positive + "\n" +
-                "Количество отрицательных = " + negative + "\n" +
-                "Количество нулей = " + zero);
+//        int counterEven = 0;
+//        int counterOdd = 0;
+//        int positive = 0;
+//        int negative = 0;
+//        int zero = 0;
+//        Random random = new Random();
+//        int n;
+//
+//        for (int i = 0; i < 100; i++) {
+//            n = random.nextInt(100 + 100) - 100;
+//
+//            if (n % 2 == 0) {
+//                counterEven++;
+//            } else {
+//                counterOdd++;
+//            }
+//            if (n > 0) {
+//                positive++;
+//            } else if (n < 0) {
+//                negative++;
+//            } else {
+//                zero++;
+//            }
+//        }
+//
+//        System.out.printf("Количество четных = " + counterEven + "\n" +
+//                "Количество нечетных " + counterOdd + "\n" +
+//                "Количество положительных = " + positive + "\n" +
+//                "Количество отрицательных = " + negative + "\n" +
+//                "Количество нулей = " + zero);
 
         /*
         Вывести на экран таблицу умножения (таблицу Пифагора).
