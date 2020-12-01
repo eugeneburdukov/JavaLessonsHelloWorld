@@ -11,21 +11,59 @@ public class Main {
         процент отрицательных чисел и процент нулей. Вычислить процент чётных чисел и процент нечётных.
          */
 
-        
+        // Random random1 = new Random();
+        // int n;
+        //
+        // n = random1.nextInt(900) + 100;
+        //To get a random number between a set range with min and max:
+        //random.nextInt(30 + 10) - 10;
+        //// max = 30; min = -10;
 
+        //random.nextInt(100 + 10) - 10;
+        //
 
+        int counterEven = 0;
+        int counterOdd = 0;
+        int positive = 0;
+        int negative = 0;
+        int zero = 0;
+        Random random = new Random();
+        int n;
+
+        for (int i = 0; i < 100; i++) {
+            n = random.nextInt(100 + 10) - 10;
+
+            if (n % 2 == 0) {
+                counterEven++;
+            } else {
+                counterOdd++;
+            }
+            if (n > 0) {
+                positive++;
+            } else if (n < 0) {
+                negative++;
+            } else {
+                zero++;
+            }
+        }
+
+        System.out.printf("Количество четных = " + counterEven + "\n" +
+                "Количество нечетных " + counterOdd + "\n" +
+                "Количество положительных = " + positive + "\n" +
+                "Количество отрицательных = " + negative + "\n" +
+                "Количество нулей = " + zero);
 
         /*
         Вывести на экран таблицу умножения (таблицу Пифагора).
          */
 
-        for (int i = 1; i < 10; i++) {
-            System.out.print(i + " ");
-            for (int j = 1; j < 10; j++) {
-                System.out.print(i * j + " ");
-            }
-            System.out.println();
-        }
+//        for (int i = 1; i < 10; i++) {
+//            System.out.print(i + " ");
+//            for (int j = 1; j < 10; j++) {
+//                System.out.print(i * j + " ");
+//            }
+//            System.out.println();
+//        }
 
 //        for (int i = 2; i < 10; i++) {
 //            for (int j = 2; j < 10; j++) {
