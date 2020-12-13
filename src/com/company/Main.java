@@ -42,17 +42,14 @@ public class Main {
 
             System.out.print("Второй массив только из чётных элементов первого массива : ");
 
-            for (int i = 0; i < arr1.length; i++) {
+            for (int i = 0 , j = 0; i < arr1.length; i++) {
                 if (arr1[i] % 2 == 0 && arr1[i] != 0) {
-                    for (int j = 0; j < arr2.length; j++) {
                         arr2[j] = arr1[i];
                         System.out.print(arr2[j] + " ");
-                        break;
-                    }
                 }
             }
         }
-        
+
         /*
         изначальное решение
          */
