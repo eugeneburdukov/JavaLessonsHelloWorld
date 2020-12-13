@@ -7,6 +7,557 @@ public class Main {
 
     public static void main(String[] lessons) {
         /*
+        Пользователь вводит с клавиатуры натуральное число большее 3, которое сохраняется в переменную n.
+        Если пользователь ввёл не подходящее число, то программа должна просить пользователя повторить ввод.
+        Создать массив из n случайных целых чисел из отрезка [0; n] и вывести его на экран.
+        Создать второй массив только из чётных элементов первого массива, если они там есть, и вывести его на экран.
+         */
+
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        int n;
+        int count = 0;
+
+        do {
+            System.out.println("Введите натуральное число большее 3 : ");
+            n = scanner.nextInt();
+        } while (n <= 3);
+
+        int[] arr1 = new int[n];
+
+        System.out.print("Исходный массив, чья длина = n : ");
+
+        for (int i = 0; i < arr1.length; i++) {
+            arr1[i] = random.nextInt(n + 1);
+            System.out.print(arr1[i] + " ");
+        }
+
+        System.out.println();
+
+        System.out.print("Чётные элементы исходного массива = ");
+
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i] % 2 == 0 && arr1[i] != 0) {
+                System.out.print(arr1[i] + " ");
+                count++;
+            }
+        }
+
+        System.out.println();
+
+        System.out.println("Длина второго массива, которую мы вычислили = " + count);
+
+        int[] arr2 = new int[count];
+
+        System.out.print("Второй массив только из чётных элементов первого массива : ");
+
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i] % 2 == 0 && arr1[i] != 0) {
+                for (int j = 0; j < arr2.length; j++) {
+                    arr2[j] = arr1[i];
+                    System.out.print(arr2[j] + " ");
+                    break;
+                }
+            }
+        }
+
+        /*
+Программа должна создать массив из 12 случайных целых чисел из отрезка [-10; 10] таким образом,
+чтобы отрицательных и положительных элементов там было поровну и не было нулей. При этом порядок
+следования элементов должен быть случаен (т. е. не подходит вариант, когда в массиве постоянно выпадает
+сначала 6 положительных, а потом 6 отрицательных чисел или же когда элементы постоянно чередуются через один и пр.).
+ Вывести полученный массив на экран.
+         */
+
+//        Random random = new Random();
+//        int[] arr = new int[12];
+//        int positiveCounter = 0;
+//        int negativeCounter = 0;
+//        int counter = 0;
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = random.nextInt(21) - 10;
+//            counter++;
+//            if (arr[i] == 0) {
+//                i--;
+//                continue;
+//            }
+//            if (arr[i] > 0 && positiveCounter == arr.length / 2) {
+//                arr[i] = arr[i] * -1;
+//            }
+//            if (arr[i] < 0 && negativeCounter == arr.length / 2) {
+//                arr[i] = arr[i] * -1;
+//            }
+//            System.out.print(arr[i] + " ");
+//            if (arr[i] > 0) {
+//                positiveCounter++;
+//            } else {
+//                negativeCounter++;
+//            }
+//        }
+//
+//        System.out.println();
+//        System.out.println(counter);
+
+        /*
+        Пользователь должен указать с клавиатуры чётное положительное число,
+        а программа должна создать массив указанного размера из случайных целых чисел из [-5; 5]
+        и вывести его на экран в строку. После этого программа должна определить и сообщить пользователю о том,
+        что сумма модулей какой половины массива больше: левой или правой, либо сообщить, что эти суммы
+        модулей равны. Если пользователь введёт неподходящее число, то программа должна требовать повторного ввода
+        до тех пор, пока не будет указано корректное значение.
+         */
+
+//        Random random = new Random();
+//        Scanner scanner = new Scanner(System.in);
+//        int n;
+//        int leftSum = 0;
+//        int rightSum = 0;
+//
+//        do {
+//            System.out.println("Введите четное положительное число: ");
+//            n = scanner.nextInt();
+//        } while (n <= 0 || n % 2 != 0);
+//
+//
+//        int[] arr = new int[n];
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = random.nextInt(11) - 5;
+//            System.out.print(arr[i] + " ");
+//            if (arr[i] < 0) {
+//                arr[i] = arr[i] * -1;
+//            }
+//            if (i < arr.length / 2) {
+//                leftSum = leftSum + arr[i];
+//            } else {
+//                rightSum = rightSum + arr[i];
+//            }
+//        }
+//
+//        System.out.println();
+//
+//        System.out.println(leftSum + " " + rightSum);
+//
+//        if (leftSum > rightSum) {
+//            System.out.println("left");
+//        } else if (rightSum > leftSum) {
+//            System.out.println("right");
+//        } else {
+//            System.out.println("=");
+//        }
+
+        /*
+        Создайте два массива из 10 целых случайных чисел из отрезка [1; 9]
+        и третий массив из 10 действительных чисел. Каждый элемент с i-ым индексом третьего
+        массива должен равняться отношению элемента из первого массива с i-ым индексом к
+        элементу из второго массива с i-ым индексом. Вывести все три массива на экран
+        (каждый на отдельной строке), затем вывести количество целых элементов в третьем массиве.
+         */
+
+//        int[] arr1 = new int[10];
+//        int[] arr2 = new int[10];
+//        double[] arr3 = new double[10];
+//        Random random = new Random();
+//        int counter = 0;
+//
+//        for (int i = 0; i < arr1.length; i++) {
+//            arr1[i] = random.nextInt(9) + 1;
+//            System.out.print(arr1[i] + " ");
+//        }
+//
+//        System.out.println();
+//
+//        for (int i = 0; i < arr2.length; i++) {
+//            arr2[i] = random.nextInt(9) + 1;
+//            System.out.print(arr2[i] + " ");
+//        }
+//
+//        System.out.println();
+//
+//        for (int i = 0; i < arr3.length; i++) {
+//            arr3[i] = (double) arr1[i] / arr2[i];
+//            System.out.printf("%.1f ", arr3[i]);
+//            if (arr3[i] == (int)arr3[i]) {
+//                counter++;
+//            }
+//        }
+//
+//        System.out.println();
+//
+//        System.out.println(counter);
+
+        /*
+        Создайте массив из 11 случайных целых чисел из отрезка [-1; 1],
+        выведите массив на экран в строку. Определите какой элемент встречается в
+        массиве чаще всего и выведите об этом сообщение на экран. Если два каких-то
+        элемента встречаются одинаковое количество раз, то не выводите ничего.
+         */
+
+//        int[] arr = new int[11];
+//        Random random = new Random();
+//        int count1 = 0;
+//        int count0 = 0;
+//        int count_1 = 0;
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = random.nextInt(3) - 1;
+//            System.out.print(arr[i] + " ");
+//            if (arr[i] == 1) {
+//                count1++;
+//            } else if (arr[i] == 0) {
+//                count0++;
+//            } else {
+//                count_1++;
+//            }
+//        }
+//
+//        System.out.println();
+//
+//        System.out.println(count1 + " " + count0 + " " + count_1);
+//
+//        if (count_1 != count0 && count0 != count1 && count1 != count_1) {
+//            if (count_1 > count0 && count_1 > count1) {
+//                System.out.println(-1);
+//            } else if (count0 > count_1 && count0 > count1) {
+//                System.out.println(0);
+//            } else {
+//                System.out.println(1);
+//            }
+//        }
+
+
+        /*
+        Создайте массив из 12 случайных целых чисел из отрезка [-15; 15].
+        Определите какой элемент является в этом массиве максимальным и
+        сообщите индекс его последнего вхождения в массив.
+         */
+
+//        int[] arr = new int[12];
+//        Random random = new Random();
+//        int max = 0;
+//        int index = 0;
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = random.nextInt(31) - 15;
+//            if (i == 0) { // нулевая итерация
+//                max = arr[i];
+//            }
+//            System.out.print(arr[i] + " ");
+//            if (arr[i] >= max) {
+//                max = arr[i];
+//                index = i;
+//            }
+//        }
+//
+//        System.out.println();
+//
+//        System.out.println(max);
+//        System.out.println(index);
+
+        /*
+        Создайте массив из 20-ти первых чисел Фибоначчи и выведите его на экран. Напоминаем,
+        что первый и второй члены последовательности равны единицам, а каждый следующий — сумме двух предыдущих.
+         */
+
+//        int[] arr = new int[20];
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            if (i < 2) {
+//                arr[i] = i;
+//            } else {
+//                arr[i] = arr[i - 1] + arr[i - 2]; //
+//            }
+//            System.out.print(arr[i] + " ");
+//        }
+
+//        for (int i = 0, first = 0, second = 1, third; i < array.length; i++) {
+//            array[i] = first;
+//            System.out.print(array[i] + " ");
+//            third = first;
+//            first = second;
+//            second = second + third;
+//        }
+
+        /*
+        Создайте массив из 4 случайных целых чисел из отрезка [10; 99], выведите его на экран в строку.
+        Определить и вывести на экран сообщение о том, является ли массив строго возрастающей последовательностью.
+         */
+
+//        int[] arr = new int[3];
+//        Random random = new Random();
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = random.nextInt(90) + 10;
+//            System.out.print(arr[i] + " ");
+//        }
+//
+//        System.out.println();
+//
+//        // каждый следующий элемент массива должен быть больше предыдущего
+//
+//        if (arr[0] < arr[1] && arr[1] < arr[2]) {
+//            System.out.println("возрастающая");
+//        } else {
+//            System.out.println("не возрастающая");
+//        }
+//
+////        for (int i = 0; i < arr.length - 1; i++) { // arr.length - 1   -   последняя ячейка в любом массиве
+////            if (arr[i] > arr[i + 1]) {
+////                System.out.println("последовательность не возрастающая!");
+////                break;
+////            }
+////            if (i == (arr.length - 2)) { // если мы дошли до предпоследней ячейки
+////                System.out.println("последовательность возрастающая!");
+////            }
+////        }
+//
+////        boolean flag = true;
+////        for (int i = 0; i < arr.length - 1; i++) {
+////            if (arr[i] > arr[i + 1]) {
+////                flag = false;
+////                System.out.println("последовательность не возрастающая!");
+////                break;
+////            }
+////        }
+////
+////        if (flag) {
+////            System.out.println("последовательность возрастающая!");
+////        }
+
+        /*
+        Создайте 2 массива из 5 случайных целых чисел из отрезка [0; 5] каждый,
+        выведите массивы на экран в двух отдельных строках. Посчитайте среднее арифметическое
+        элементов каждого массива и сообщите,
+        для какого из массивов это значение оказалось больше (либо сообщите, что их средние арифметические равны).
+         */
+
+//        int[] arr = new int[5];
+//        int[] arr2 = new int[5];
+//        Random random = new Random();
+//        double arifm1 = 0;
+//        double arifm2 = 0;
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = random.nextInt(6);
+//            System.out.print(arr[i] + " ");
+//            arifm1 = arifm1 + arr[i];
+//        }
+//
+//        System.out.println();
+//
+//        for (int i = 0; i < arr2.length; i++) {
+//            arr2[i] = random.nextInt(6);
+//            System.out.print(arr2[i] + " ");
+//            arifm2 = arifm2 + arr2[i];
+//        }
+//
+//        System.out.println();
+//
+//        if (arifm1 == arifm2) {
+//            System.out.println(arifm1 / arr.length + " = " + arifm2 / arr.length);
+//        } else if (arifm1 > arifm2) {
+//            System.out.println(arifm1 / arr.length + " > " + arifm2 / arr.length);
+//        } else {
+//            System.out.println(arifm1 / arr.length + " < " + arifm2 / arr.length);
+//        }
+
+        /*
+        Создайте массив из 8 случайных целых чисел из отрезка [1; 10]. Выведите массив на экран в строку.
+        Замените каждый элемент с нечётным индексом на ноль. Снова выведете массив на экран на отдельной строке.
+         */
+
+//        Random random = new Random();
+//
+//        int[] arr = new int[8];
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = random.nextInt(10) + 1;
+//            System.out.print(arr[i] + " ");
+//            if (i % 2 != 0) {
+//                arr[i] = 0;
+//            }
+//        }
+//
+//        System.out.println();
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//
+//        System.out.println();
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(i + " ");
+//        }
+
+        /*
+        Создайте массив из 15 случайных целых чисел из отрезка [0; 9]. Выведите массив на экран.
+        Подсчитайте сколько в массиве чётных элементов и выведете это количество на экран на отдельной строке.
+         */
+
+//        int[] arr = new int[15];
+//        Random random = new Random();
+//        int counter = 0;
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = random.nextInt(10);
+//            System.out.print(arr[i] + " ");
+//            if (arr[i] % 2 == 0 && arr[i] != 0) {
+//                counter++;
+//            }
+//        }
+//
+//        System.out.println();
+//        System.out.println("Количество в массиве чётных элементов = " + counter);
+
+
+        /*
+        Создайте массив из всех нечётных чисел от 1 до 99,
+         выведите его на экран в строку, а затем этот же массив выведите на экран тоже в строку,
+         но в обратном порядке.
+         */
+
+//        int[] arr; // обьявили массив, но не можем инициализировать, не знаем длину
+//        int lenghtOfArr = 0; // счетчик длины массива - количества ячеек
+//
+//        for (int i = 1; i < 100; i++) { // подсчет длины массива - нечётных чисел от 1 до 99
+//            if (i % 2 != 0) {
+//                lenghtOfArr++;
+//            }
+//        }
+//
+//        System.out.println(lenghtOfArr);
+//
+//        arr = new int[lenghtOfArr]; // инициализация массива - длина массива 50
+//
+//        for (int i = 0, j = 1; i < arr.length; i++) { // заполнение массива, для заполнения нужна дополнительная
+//            // переменная
+//            arr[i] = j;
+//            j = j + 2;
+//            System.out.print(arr[i] + " ");
+//        }
+//
+//        System.out.println();
+//
+//        for (int i = arr.length - 1; i >= 0; i--) {
+//            System.out.print(arr[i] + " ");
+//        }
+
+        /*
+        Создайте массив из всех чётных чисел от 2 до 20 и выведите
+        элементы массива на экран сначала в строку, отделяя один элемент
+        от другого пробелом, а затем в столбик (отделяя один элемент от другого
+        началом новой строки).
+2 4 6 … 18 20
+2
+4
+6
+…
+20
+         */
+
+//        int[] arr;
+//        int lenghtOfArr = 0;
+//
+//        for (int i = 2; i < 21; i++) {
+//            if (i % 2 == 0) {
+//                lenghtOfArr++;
+//            }
+//        }
+//
+//        arr = new int[lenghtOfArr];
+//
+//        for (int i = 0, j = 2; i < arr.length; i++) {
+//            arr[i] = j;
+//            j = j + 2;
+//            System.out.print(arr[i] + " ");
+//        }
+//
+//        for (int i = 0, j = 2; i < arr.length; i++) {
+//            arr[i] = j;
+//            j = j + 2;
+//            System.out.println();
+//            System.out.print(arr[i]);
+//        }
+
+        /*
+        Создать и заполнить массив значениями от 0 до 9.
+         */
+
+//        int[] arr = new int[10];
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = i;
+//            System.out.print(arr[i] + " ");
+//        }
+
+
+        /*
+        Задача 2. Дан массив действительных чисел. Вычислить сумму положительных
+        и произведение четных по значению членов данного массива. Если членов с
+        положительными или четными значениями нет, то выдать  соответствующее сообщение.
+         */
+
+//        int resultSum = 0;
+//        int resultMult = 1;
+//        int[] arr = new int[]{4, -2, 0, 3, 1, 2, -5, 5, 7, 9};
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i] > 0) {
+//                resultSum = resultSum + arr[i];
+//            }
+//            if (arr[i] % 2 == 0 && arr[i] != 0) {
+//                resultMult = resultMult * arr[i];
+//            }
+//        }
+//
+//        System.out.println(resultSum);
+//        System.out.println(resultMult);
+
+
+        /*
+        Задача 1. Дан массив чисел: а[0], a[1], a[2], ..., а[n-1]. Выяснить, имеются ли в данном
+        массиве два идущих подряд  положительных элемента. Подсчитать количество таких пар.
+         */
+
+//        int counter = 0;
+//        int[] a = new int[]{4, -1, 22, 35, 100, 21, -54, 5, 7, 90};
+//
+//        for (int i = 0; i < a.length - 1; i++) {
+//            if (a[i] > 0 && a[i + 1] > 0) {
+//                counter++;
+//            }
+//        }
+//
+//        System.out.println(counter);
+
+
+//        /*
+//        тестовый массив № 1
+//         */
+//
+//        int[] monthDays = new int[5];
+//        monthDays[0] = 31;
+//        monthDays[1] = 30;
+//        monthDays[2] = 29;
+//        monthDays[3] = 28;
+//        monthDays[4] = 27;
+//        System.out.println(monthDays[4]);
+//
+//        int[] arr = new int[]{-13, 0, 2, 4, 7};
+
+        /*
+        тестовый массив № 2
+         */
+
+//        int monthDays[] = {
+//                31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
+//        };
+//
+//        System.out.println("В декабре " + monthDays[11] + " дней");
+
+        /*
         Загадать случайно 100 целых чисел в диапазоне от -100 до 100. Вычислить процент положительных чисел,
         процент отрицательных чисел и процент нулей. Вычислить процент чётных чисел и процент нечётных.
          */
@@ -19,8 +570,9 @@ public class Main {
 //        Random random = new Random();
 //        int n;
 //
-//        for (int i = 0; i < 100; i++) {
-//            n = random.nextInt(100 + 1) - 100;
+//        for (int i = 0; i < 10; i++) {
+//            n = random.nextInt(21) - 10;
+//            System.out.print(n + " ");
 //
 //            if (n % 2 == 0) {
 //                counterEven++;
@@ -36,7 +588,7 @@ public class Main {
 //            }
 //        }
 //
-//        System.out.printf("Количество четных = " + counterEven + "\n" +
+//        System.out.printf("\nКоличество четных = " + counterEven + "\n" +
 //                "Количество нечетных " + counterOdd + "\n" +
 //                "Количество положительных = " + positive + "\n" +
 //                "Количество отрицательных = " + negative + "\n" +
@@ -59,7 +611,7 @@ public class Main {
 //        int min = 0;
 //
 //        for (int i = 0; i < 10000; i++) {
-//            n = random.nextInt(101 + 100) - 100;
+//            n = random.nextInt(110) - 10;
 //            if (n >= max) {
 //                max = n;
 //            }
@@ -71,23 +623,17 @@ public class Main {
 //        System.out.println("Нижняя граница = " + min + "\n"
 //                + "Верхняя граница = "+ max);
 
-
-//        for (int i = 100; i > 0; --i) {
-//            int run = new Random().nextInt(200);
-//            System.out.println(run - 100);
-//        }
-
         /*
         Вывести на экран таблицу умножения (таблицу Пифагора).
          */
 
-        for (int i = 1; i < 10; i++) {
-            System.out.print(i + " ");
-            for (int j = 1; j < 10; j++) {
-                System.out.print(i * j + " ");
-            }
-            System.out.println();
-        }
+//        for (int i = 1; i < 10; i++) {
+//            System.out.print(i + " ");
+//            for (int j = 1; j < 10; j++) {
+//                System.out.printf("%2d ", i * j);
+//            }
+//            System.out.println();
+//        }
 
 //        for (int i = 2; i < 10; i++) {
 //            for (int j = 2; j < 10; j++) {
@@ -1334,17 +1880,17 @@ _______ s = 990;
 
 
 // todo строчный комментарий
-/*
+        /*
 
 
 
- */
+         */
 
-/*
- *
- *
- *
- */
+        /*
+         *
+         *
+         *
+         */
 //        int z, a = 3, b, c = 6;
 //        int x = 3;
 //        int y = 5;
@@ -1352,4 +1898,4 @@ _______ s = 990;
 //
 //        System.out.println(z);
     }
-            }
+}
