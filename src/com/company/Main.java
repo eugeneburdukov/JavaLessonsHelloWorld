@@ -46,9 +46,21 @@ public class Main {
                 if (arr1[i] % 2 == 0 && arr1[i] != 0) {
                         arr2[j] = arr1[i];
                         System.out.print(arr2[j] + " ");
+                        j++;
                 }
             }
+
+            System.out.println();
+
+            System.out.println("Проверка массива");
+
+            for (int i = 0; i < arr2.length; i++) {
+                System.out.print(arr2[i] + " ");
+
+            }
         }
+
+
 
         /*
         изначальное решение
