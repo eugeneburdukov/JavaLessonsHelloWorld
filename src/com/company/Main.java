@@ -52,15 +52,13 @@ public class Main {
 
             System.out.println();
 
-            System.out.println("Проверка массива");
+            System.out.print("Проверка массива = ");
 
             for (int i = 0; i < arr2.length; i++) {
                 System.out.print(arr2[i] + " ");
 
             }
         }
-
-
 
         /*
         изначальное решение
@@ -109,9 +107,16 @@ public class Main {
 //                for (int j = 0; j < arr2.length; j++) {
 //                    arr2[j] = arr1[i];
 //                    System.out.print(arr2[j] + " ");
+//                    j++;
 //                    break;
 //                }
 //            }
+//        }
+//
+//        System.out.println("проверка массива");
+//
+//        for (int i = 0; i < arr2.length; i++) {
+//            System.out.print(arr2[i] + " ");
 //        }
 
         /*
