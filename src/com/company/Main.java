@@ -7,58 +7,178 @@ public class Main {
 
     public static void main(String[] lessons) {
         /*
+        Создать двумерный массив из 7 строк по 4 столбца в каждой из случайных целых чисел из отрезка [-5; 5].
+        Вывести массив на экран. Определить и вывести на экран индекс строки с наибольшим по модулю произведением
+        элементов. Если таких строк несколько, то вывести индекс первой встретившейся из них.
+         */
+
+        Random random = new Random();
+        int[][] arr = new int[7][4];
+        int mult = 1;
+        int max = 0;
+        int index = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr[i][j] = random.nextInt(11) - 5;
+                System.out.printf("%3d ", arr[i][j]);
+                if (arr[i][j] < 0) {
+                    arr[i][j] = arr[i][j] * -1;
+                }
+                mult = arr[i][j] * mult;
+            }
+            if (mult > max) {
+                max = mult;
+                index = i;
+            }
+            System.out.print("Произведение элементов = " + mult + ", Индекс строки = " + i);
+            System.out.println();
+            mult = 1;
+        }
+
+        System.out.println();
+        System.out.println("Наибольшее по модулю произведениее элементов = " + max + ", Индекс =  " + index);
+
+
+
+        /*
+        Создать двумерный массив из 5 строк по 8 столбцов в каждой из случайных целых чисел из отрезка [-99; 99].
+         Вывести массив на экран. После на отдельной строке вывести на экран значение максимального
+         элемента этого массива (его индекс не имеет значения).
+         */
+
+//        int[][] arr = new int[5][8];
+//        Random random = new Random();
+//        int max = -99;
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = 0; j < arr[i].length; j++) {
+//                arr[i][j] = random.nextInt(199) - 99;
+//                System.out.printf("%3d ", arr[i][j]);
+//                if (arr[i][j] > max) {
+//                    max = arr[i][j];
+//                }
+//            }
+//            System.out.println();
+//        }
+//
+//        System.out.println();
+//        System.out.println(max);
+
+
+
+
+
+
+
+
+        /*
+        Создать двумерный массив из 8 строк по 5 столбцов в каждой из случайных целых чисел из отрезка [10; 99].
+        Вывести массив на экран.
+         */
+//
+//        Random random = new Random();
+//        int[][] arr = new int[8][5]; // строчки, столбцы
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = 0; j < arr[i].length; j++) {
+//                arr[i][j] = random.nextInt(90) + 10;
+//                System.out.print(arr[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = 0; j < arr[i].length; j++) {
+//                System.out.print(arr[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+
+        /*
+        Дан массив произвольных положительных чисел.
+        Так же дано число Х. Найти ближайшее число из массива к числу Х не более чем за один проход массива.
+Например:
+Массив 2, 6, 9, 4, 1, 23, 55
+Число Х = 7
+Ближайшим является число 9
+         */
+
+//        int[] arr = new int[]{2, 6, 9, 4, 1, 23, 55};
+//        int x = 10;
+//
+//        int result = arr[0];
+//
+//        for (int i = 0, minDistance = 0; i < arr.length; i++) {
+//            int distance = arr[i] - x;
+//            if (distance < 0) {
+//                distance = distance * -1;
+//            }
+//            if (i == 0) {
+//                minDistance = distance;
+//                continue; // обрывает текущую итерацию, отправляет в третий раздел
+//            }
+//            if (distance < minDistance) {
+//                minDistance = distance;
+//                result = arr[i];
+//            }
+//        }
+//
+//        System.out.println(result);
+
+        /*
         Пользователь вводит с клавиатуры натуральное число большее 3, которое сохраняется в переменную n.
         Если пользователь ввёл не подходящее число, то программа должна просить пользователя повторить ввод.
         Создать массив из n случайных целых чисел из отрезка [0; n] и вывести его на экран.
         Создать второй массив только из чётных элементов первого массива, если они там есть, и вывести его на экран.
          */
 
-        Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
-        int n;
-        int count = 0;
-
-        do {
-            System.out.println("Введите натуральное число большее 3 : ");
-            n = scanner.nextInt();
-        } while (n <= 3);
-
-        int[] arr1 = new int[n];
-
-        System.out.print("Исходный массив, чья длина = " + n + " : ");
-
-        for (int i = 0; i < arr1.length; i++) {
-            arr1[i] = random.nextInt(n + 1);
-            System.out.print(arr1[i] + " ");
-            if (arr1[i] % 2 == 0 && arr1[i] != 0) {
-                count++;
-            }
-        }
-
-        System.out.println();
-
-        if (count > 0) {
-            int[] arr2 = new int[count];
-
-            System.out.print("Второй массив только из чётных элементов первого массива : ");
-
-            for (int i = 0 , j = 0; i < arr1.length; i++) {
-                if (arr1[i] % 2 == 0 && arr1[i] != 0) {
-                        arr2[j] = arr1[i];
-                        System.out.print(arr2[j] + " ");
-                        j++;
-                }
-            }
-
-            System.out.println();
-
-            System.out.print("Проверка массива = ");
-
-            for (int i = 0; i < arr2.length; i++) {
-                System.out.print(arr2[i] + " ");
-
-            }
-        }
+//        Scanner scanner = new Scanner(System.in);
+//        Random random = new Random();
+//        int n;
+//        int count = 0;
+//
+//        do {
+//            System.out.println("Введите натуральное число большее 3 : ");
+//            n = scanner.nextInt();
+//        } while (n <= 3);
+//
+//        int[] arr1 = new int[n];
+//
+//        System.out.print("Исходный массив, чья длина = " + n + " : ");
+//
+//        for (int i = 0; i < arr1.length; i++) {
+//            arr1[i] = random.nextInt(n + 1);
+//            System.out.print(arr1[i] + " ");
+//            if (arr1[i] % 2 == 0 && arr1[i] != 0) {
+//                count++;
+//            }
+//        }
+//
+//        System.out.println();
+//
+//        if (count > 0) {
+//            int[] arr2 = new int[count];
+//
+//            System.out.print("Второй массив только из чётных элементов первого массива : ");
+//
+//            for (int i = 0 , j = 0; i < arr1.length; i++) {
+//                if (arr1[i] % 2 == 0 && arr1[i] != 0) {
+//                        arr2[j] = arr1[i];
+//                        System.out.print(arr2[j] + " ");
+//                        j++;
+//                }
+//            }
+//
+//            System.out.println();
+//
+//            System.out.print("Проверка массива = ");
+//
+//            for (int i = 0; i < arr2.length; i++) {
+//                System.out.print(arr2[i] + " ");
+//
+//            }
+//        }
 
         /*
         изначальное решение
