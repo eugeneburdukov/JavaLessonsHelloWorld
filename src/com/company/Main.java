@@ -7,37 +7,104 @@ public class Main {
 
     public static void main(String[] lessons) {
         /*
+Интересная задачка
+     Для проверки остаточных знаний учеников после летних каникул, учитель младших классов решил
+      начинать каждый урок с того, чтобы задавать каждому ученику пример из таблицы умножения,
+      но в классе 15 человек, а примеры среди них не должны повторяться. В помощь учителю напишите программу,
+      которая будет выводить на экран 15 случайных примеров из таблицы умножения (от 2*2 до 9*9, потому что задания
+      по умножению на 1 и на 10 — слишком просты). При этом среди 15 примеров не должно быть повторяющихся
+      (примеры 2*3 и 3*2 и им подобные пары считать повторяющимися).
+
+      3 x 5 = 15
+
+         */
+
+        Random random = new Random();
+
+        int[][] arr = new int[15][2];
+
+        for (int i = 0; i < 15; i++) {
+            int x = random.nextInt(8) + 2;
+            int y = random.nextInt(8) + 2;
+            // TODO: 16.12.2020 проверить не было ли такой пары уже, если была, то перегенерировать
+            arr[i][0] = x;
+            arr[i][1] = y;
+            System.out.println(x + " x " + y + " = " + (x * y));
+        }
+
+
+
+
+
+
+        /*
+        Создать двумерный массив из 6 строк по 7 столбцов в каждой из случайных целых чисел из отрезка [0;9].
+        Вывести массив на экран. Преобразовать массив таким образом, чтобы на первом месте в каждой строке стоял
+        её наибольший элемент. При этом изменять состав массива нельзя, а можно только переставлять элементы в
+        рамках одной строки. Порядок остальных элементов строки не важен (т.е. можно совершить только одну
+        перестановку, а можно отсортировать по убыванию каждую строку). Вывести преобразованный массив на экран.
+         */
+
+//        Random random = new Random();
+//        int[][] arr = new int[6][7];
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            int max = 0, maxIndex = 0;
+//            for (int j = 0; j < arr[i].length; j++) {
+//                arr[i][j] = random.nextInt(10);
+//                System.out.print(arr[i][j] + " ");
+//                if (arr[i][j] > max) {
+//                    max = arr[i][j];
+//                    maxIndex = j;
+//                }
+//            }
+//            if (arr[i][0] < max) {
+//                int temp = arr[i][0];
+//                arr[i][0] = max;
+//                arr[i][maxIndex] = temp;
+//            }
+//            System.out.println(" = " + max);
+//        }
+//
+//        System.out.println();
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = 0; j < arr[i].length; j++) {
+//                System.out.print(arr[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+
+        /*
         Создать двумерный массив из 7 строк по 4 столбца в каждой из случайных целых чисел из отрезка [-5; 5].
         Вывести массив на экран. Определить и вывести на экран индекс строки с наибольшим по модулю произведением
         элементов. Если таких строк несколько, то вывести индекс первой встретившейся из них.
          */
 
-        Random random = new Random();
-        int[][] arr = new int[7][4];
-        int mult = 1;
-        int max = 0;
-        int index = 0;
-
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                arr[i][j] = random.nextInt(11) - 5;
-                System.out.printf("%3d ", arr[i][j]);
-                if (arr[i][j] < 0) {
-                    arr[i][j] = arr[i][j] * -1;
-                }
-                mult = arr[i][j] * mult;
-            }
-            if (mult > max) {
-                max = mult;
-                index = i;
-            }
-            System.out.print("Произведение элементов = " + mult + ", Индекс строки = " + i);
-            System.out.println();
-            mult = 1;
-        }
-
-        System.out.println();
-        System.out.println("Наибольшее по модулю произведениее элементов = " + max + ", Индекс =  " + index);
+//        Random random = new Random();
+//        int[][] arr = new int[7][4];
+//        int index = 0;
+//
+//        for (int i = 0, max = 0; i < arr.length; i++) {
+//            int mult = 1;
+//            for (int j = 0; j < arr[i].length; j++) {
+//                arr[i][j] = random.nextInt(11) - 5;
+//                System.out.printf("%3d ", arr[i][j]);
+//                mult = arr[i][j] * mult;
+//                if (mult < 0) {
+//                    mult = mult * -1;
+//                }
+//            }
+//            if (mult > max) {
+//                max = mult;
+//                index = i;
+//            }
+//            System.out.print("Произведение элементов = " + mult + ", Индекс строки = " + i);
+//            System.out.println();
+//        }
+//
+//        System.out.println();
+//        System.out.println("Индекс =  " + index);
 
 
 
