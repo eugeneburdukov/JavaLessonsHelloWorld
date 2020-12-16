@@ -1,11 +1,14 @@
 package com.company;
 
+import javax.swing.plaf.basic.BasicLookAndFeel;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] lessons) {
+
+        blabla vla BasicLookAndFeel
         /*
 Интересная задачка
      Для проверки остаточных знаний учеников после летних каникул, учитель младших классов решил
