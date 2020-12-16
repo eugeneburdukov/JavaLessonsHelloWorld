@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class Main {
 
+    test
+
     public static void main(String[] lessons) {
         /*
 Интересная задачка
@@ -31,10 +33,6 @@ public class Main {
             arr[i][1] = y;
             System.out.println(x + " x " + y + " = " + (x * y));
         }
-
-
-
-
 
 
         /*
