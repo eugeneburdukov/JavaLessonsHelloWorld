@@ -5,11 +5,6 @@ import java.util.Scanner;
 
 public class Main {
 
-    test
-
-
-    test3
-
     public static void main(String[] lessons) {
         /*
 Интересная задачка
