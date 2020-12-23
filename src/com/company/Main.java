@@ -8,6 +8,42 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] lessons) {
+        /*
+        Сортировка выборкой
+        Рассмотрим пример сортировки по возрастанию. То есть, в результате выполнения программы,
+        на начальной позиции в массиве должен стоять минимальный элемент, на следующей — больший или равный и т. д.,
+         на последнем месте должен стоять наибольший элемент.
+Суть алгоритма такова. Во всём массиве отыскиваем минимальный элемент, меняем его местами с начальным.
+Затем в оставшейся части массива (т. е. среди всех элементов кроме начального) снова отыскиваем минимальный элемент,
+меняем его местами уже со вторым элементом в массиве. И так далее. Другими словами, берем нулевой элемент и определяем
+ его как временно наименьший элемент и сравниваем последовательно с остальными, пока он меньше других. Если он вдруг
+ оказывается больше очередного элемента в цепи сравнений, то определяем его как временно наименьший и продолжаем
+ движение по массиву. В конце этот временно наименьший элемент ставим в нулевую ячейку (так как он действительно
+  наименьший в данном массиве) а на его месть переносим элемент из нулевой ячейки (меняем их местами).
+  Следующую итерацию начинаем со следующей (не нулевой а уже первой ячейки). И.Т.Д.
+         */
+
+        int [] arr = new int[] {1, -3, 0, -9, 2, -13};
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            int min = arr[i];
+            int minIndex = i;
+
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < min) {
+                    min = arr[j];
+                    minIndex = j;
+                }
+            }
+            int temp = arr[i];
+            arr[i] = min;
+            arr[minIndex] = temp;
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
 
         /*
     Интересная задачка
@@ -22,27 +58,48 @@ public class Main {
 
          */
 
-        Random random = new Random();
+//        Random random = new Random();
+//
+//        int[][] arr = new int[15][2];
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i][0] = random.nextInt(8) + 2; // 7
+//            arr[i][1] = random.nextInt(8) + 2; // 5
+//            boolean flag = true;
+//            for (int j = 0; j < i; j++) {
+//                if (arr[j][0] == arr[i][0] && arr[j][1] == arr[i][1] || arr[j][0] == arr[i][1] && arr[j][1] == arr[i][0]) {
+//                    flag = false;
+//                    i--;
+//                    break;
+//                }
+//            }
+//            if (flag == false) {
+//                continue;
+//            }
+//
+//            System.out.println(arr[i][0] + " x " + arr[i][1] + " = " + (arr[i][0] * arr[i][1]));
+//        }
 
-        int[][] arr = new int[15][2];
-
-        for (int i = 0; i < 15; i++) {
-            int x = random.nextInt(8) + 2;
-            int y = random.nextInt(8) + 2;
-            // TODO: 16.12.2020 проверить не было ли такой пары уже, если была, то перегенерировать
-            arr[i][0] = x;
-            arr[i][1] = y;
+//        for (int i = 0; i < arr.length; i++) {
+//            int x = random.nextInt(8) + 2; // 7
+//            int y = random.nextInt(8) + 2; // 5
+//            boolean flag = true;
+//            for (int j = 0; j < arr.length; j++) {
+//                if (arr[j][0] == x && arr[j][1] == y || arr[j][0] == y && arr[j][1] == x) {
+//                    flag = false;
+//                    i--;
+//                    break;
+//                }
+//            }
+//            if (flag == false) {
+//                continue;
+//            }
+//
+//            arr[i][0] = x;
+//            arr[i][1] = y;
 //            System.out.println(x + " x " + y + " = " + (x * y));
-        }
+//        }
 
-        System.out.println();
-
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                System.out.print(arr[i][j] + " ");
-            }
-            System.out.println();
-        }
         
         /*
         Создать двумерный массив из 6 строк по 7 столбцов в каждой из случайных целых чисел из отрезка [0;9].
