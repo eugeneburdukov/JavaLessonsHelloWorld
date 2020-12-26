@@ -1,13 +1,96 @@
 package com.company;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] lessons) {
+        /*
+        Даны два слова, каждое в отдельной строке.
+        Распечатать все буквы, которые присутствуют в одном слове и отсутствуют во втором.
+         */
+
+        String str1 = "цифры";
+        String str2 = "буквы";
+
+
+
+
+
+
+//        String str1 = "HelloWorld";
+//        String str2 = new String("HelloWorld");
+//        String str3 = "HelloWorld";
+//
+//        System.out.println(str1.equals(str2));
+
+
+        /*
+        Сортировка методом пузырька
+Суть алгоритма такова. Если пройдёмся по любому массиву установив правильный порядок
+в каждой паре соседних элементов, то после того прохода на последнем месте массива гарантированно
+будет стоять нужный элемент (самый большой для сортировки по возрастанию или самый маленький
+для сортировки по убыванию). Если ещё раз пройтись по массиву с такими же преобразованиями,
+то и на предпоследнем месте гарантированно окажется нужный элемент. И так далее.
+Пример:
+2 9 1 4 3 5 2 → порядок правильный (2 9), не будет перестановки
+2 9 1 4 3 5 2 → 2 1 9 4 3 5 2
+2 1 9 4 3 5 2 → 2 1 4 9 3 5 2
+2 1 4 9 3 5 2 → 2 1 4 3 9 5 2
+2 1 4 3 9 5 2 → 2 1 4 3 5 9 2
+2 1 4 3 5 9 2 → 2 1 4 3 5 2 9
+         */
+
+        //        int [] arr = new int[] {1, -3, 0, -9, 2, -13};
+//        int[] arr = new int[]{1, 2, 3, 4, 6, 5};
+//        int counter = 0;
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            boolean flag = true;
+//            for (int j = 0; j < arr.length - 1; j++) {
+//                counter++;
+//                if (arr[j] > arr[j + 1]) {
+//                    int temp = arr[j];
+//                    arr[j] = arr[j + 1];
+//                    arr[j + 1] = temp;
+//                    flag = false;
+//                }
+//            }
+//            if (flag == true) {
+//                break;
+//            }
+//        }
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//
+//        System.out.println();
+//        System.out.println(counter++);
+
+////        int [] arr = new int[] {1, -3, 0, -9, 2, -13};
+//        int[] arr = new int[]{1, 2, 3, 4, 5, 6};
+//        int counter = 0;
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = 0; j < arr.length - 1; j++) {
+//                counter++;
+//                if (arr[j] > arr[j + 1]) {
+//                    int temp = arr[j];
+//                    arr[j] = arr[j + 1];
+//                    arr[j + 1] = temp;
+//                }
+//            }
+//        }
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//
+//        System.out.println();
+//        System.out.println(counter++);
+
         /*
         Сортировка выборкой
         Рассмотрим пример сортировки по возрастанию. То есть, в результате выполнения программы,
@@ -23,26 +106,26 @@ public class Main {
   Следующую итерацию начинаем со следующей (не нулевой а уже первой ячейки). И.Т.Д.
          */
 
-        int [] arr = new int[] {1, -3, 0, -9, 2, -13};
-
-        for (int i = 0; i < arr.length - 1; i++) {
-            int min = arr[i];
-            int minIndex = i;
-
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < min) {
-                    min = arr[j];
-                    minIndex = j;
-                }
-            }
-            int temp = arr[i];
-            arr[i] = min;
-            arr[minIndex] = temp;
-        }
-
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
+//        int [] arr = new int[] {1, -3, 0, -9, 2, -13};
+//
+//        for (int i = 0; i < arr.length - 1; i++) {
+//            int min = arr[i];
+//            int minIndex = i;
+//
+//            for (int j = i + 1; j < arr.length; j++) {
+//                if (arr[j] < min) {
+//                    min = arr[j];
+//                    minIndex = j;
+//                }
+//            }
+//            int temp = arr[i];
+//            arr[i] = min;
+//            arr[minIndex] = temp;
+//        }
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
 
 
         /*
