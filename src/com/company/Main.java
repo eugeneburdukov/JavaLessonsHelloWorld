@@ -7,17 +7,67 @@ public class Main {
 
     public static void main(String[] lessons) {
         /*
+        Ввести предложение с клавиатуры. Заменить все вхождения одного слова в предложении другим словом.
+         */
+
+        Scanner scanner = new Scanner(System.in);
+        String oldWord = "test";
+        String newWord = "best";
+
+        System.out.print("Ввести предложение с клавиатуры: ");
+        String str1 = scanner.nextLine();
+
+
+
+        /*
+        В строке находится одно слово. Изменить порядок букв в слове на обратный
+         */
+
+//        String str1 = "строка";
+//
+//        for (int i = 0, j = str1.length() - 1; i < str1.length() / 2; i++, j--) {
+//            str1 = str1.substring(0, i) + str1.charAt(j) + str1.substring(i + 1, j) + str1.charAt(i) + str1.substring(j + 1);
+//            // "" + a + трок + с + ""   атрокс  а + к + ро + т + с
+//        }
+//
+//        System.out.println(str1);
+
+        /*
+        тест
+         */
+
+//        String str1 = "Eugene";
+//        char letter = 'e';
+//        int counter = 0;
+//
+//        for (int i = 0; i < str1.length(); i++) {
+//            if (str1.toLowerCase().charAt(i) == letter) {
+//                counter++;
+//            }
+//        }
+//
+//        System.out.println(counter);
+
+        /*
         Даны два слова, каждое в отдельной строке.
         Распечатать все буквы, которые присутствуют в одном слове и отсутствуют во втором.
          */
 
-        String str1 = "цифры";
-        String str2 = "буквы";
-
-
-
-
-
+//        String str1 = "цифры";
+//        String str2 = "букварь";
+//
+//        for (int i = 0; i < str1.length(); i++) {
+//            boolean flag = true;
+//            for (int j = 0; j < str2.length(); j++) {
+//                if (str1.charAt(i) == str2.charAt(j)) {
+//                    flag = false;
+//                    break;
+//                }
+//            }
+//            if (flag) {
+//                System.out.print(str1.charAt(i) + " ");
+//            }
+//        }
 
 //        String str1 = "HelloWorld";
 //        String str2 = new String("HelloWorld");
