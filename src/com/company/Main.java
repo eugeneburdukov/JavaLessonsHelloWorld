@@ -17,6 +17,8 @@ public class Main {
         System.out.print("Ввести предложение с клавиатуры: ");
         String str1 = scanner.nextLine();
 
+        System.out.print(str1);
+
 
 
         /*
