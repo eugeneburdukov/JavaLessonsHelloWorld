@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -23,7 +22,7 @@ public class Main {
                 i = i + newWord.length();
             }
         }
-        
+
         System.out.println(str);
 
 //        (str.charAt(i) == oldWord.charAt(0))
