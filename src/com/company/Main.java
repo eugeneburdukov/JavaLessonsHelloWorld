@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -11,19 +12,34 @@ public class Main {
          */
 
         Scanner scanner = new Scanner(System.in);
-        String oldWord = "test";
-        String newWord = "best";
+        String oldWord = "Test";
+        String newWord = "mytest";
 
-        System.out.print("Ввести предложение с клавиатуры: ");
-        String str1 = scanner.nextLine();
-        String[] str2 = str1.split("\\s");
+        String str = "best testtete Test test";
 
-        for (int i = 0; i < str2.length; i++) {
-            if (str2[i].equals(oldWord)) { // str1.equals(str2)
-                str2[i] = newWord;
+        for (int i = 0; i < str.length() - oldWord.length() + 1; i++) {
+            if (str.substring(i, i + oldWord.length()).toLowerCase().equals(oldWord.toLowerCase())) {
+                str = str.substring(0, i) + newWord + str.substring(i + oldWord.length());
+                i = i + newWord.length();
             }
-            System.out.print(str2[i] + " ");
         }
+
+
+        System.out.println(str);
+
+//        (str.charAt(i) == oldWord.charAt(0))
+
+
+//        System.out.print("Ввести предложение с клавиатуры: ");
+//        String str1 = scanner.nextLine();
+//        String[] str2 = str1.split("\\s");
+//
+//        for (int i = 0; i < str2.length; i++) {
+//            if (str2[i].equals(oldWord)) { // str1.equals(str2)
+//                str2[i] = newWord;
+//            }
+//            System.out.print(str2[i] + " ");
+//        }
 
         /*
         В строке находится одно слово. Изменить порядок букв в слове на обратный
