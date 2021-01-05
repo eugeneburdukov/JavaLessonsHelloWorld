@@ -8,10 +8,10 @@ public class Main {
 
     public static void main(String[] lessons) {
         /*
-        Ввести предложение с клавиатуры. Заменить все вхождения одного слова в предложении другим словом.
+        Заменить все вхождения одного слова в предложении другим словом.
          */
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
         String oldWord = "Test";
         String newWord = "mytest";
 
@@ -23,8 +23,7 @@ public class Main {
                 i = i + newWord.length();
             }
         }
-
-
+        
         System.out.println(str);
 
 //        (str.charAt(i) == oldWord.charAt(0))
