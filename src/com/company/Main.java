@@ -16,10 +16,14 @@ public class Main {
 
         System.out.print("Ввести предложение с клавиатуры: ");
         String str1 = scanner.nextLine();
+        String[] str2 = str1.split("\\s");
 
-        System.out.print(str1);
-
-
+        for (int i = 0; i < str2.length; i++) {
+            if (str2[i].equals(oldWord)) { // str1.equals(str2)
+                str2[i] = newWord;
+            }
+            System.out.print(str2[i] + " ");
+        }
 
         /*
         В строке находится одно слово. Изменить порядок букв в слове на обратный
