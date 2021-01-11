@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,23 +8,111 @@ public class Main {
 
     public static void main(String[] lessons) {
         /*
+        Задача "Палиндром"
+Палиндром – строка, которая читается одинаково в обоих направлениях до середины
+(примеры: «комок», «ротор» или «АВВА»).
+Создать программу, которая будет проверять, является ли слово из пяти букв, введённое пользователем,
+палиндромом. Если введено слово не из 5 букв, то сообщать об ошибке. Программа должна нормально обрабатывать слово,
+ даже если в нём использованы символы разного регистра. Например, слова «Комок»,  или «РОТОР» следует также
+ считать палиндромами.
+         */
+
+//        Scanner scanner = new Scanner(System.in);
+//        String word = "Теститсет";
+
+//        do {
+//            System.out.print("Введите слово из пяти букв: ");
+//            word = scanner.nextLine();
+//        } while (word.length() != 5);
+
+//        System.out.println(word);
+//
+//        boolean flag = true;
+//
+//        for (int i = 0; i < word.length() / 2; i++) {
+//            if (word.toLowerCase().charAt(i) != word.toLowerCase().charAt(word.length() - 1 - i)) {
+//                System.out.println("не палиндром");
+//                flag = false;
+//                break;
+//            }
+//        }
+//
+//        if (flag) {
+//            System.out.println("палиндром");
+//        }
+
+//        if (word.charAt(0) == word.charAt(4) && word.charAt(1) == word.charAt(3)) {
+//            System.out.println("палиндром");
+//        } else {
+//            System.out.println("не палиндром");
+//        }
+
+
+
+
+
+
+        /*
+        Дан массив строк. Упорядочить строки в массиве по алфавиту.
+         */
+
+//        String[] str0 = {"sun", "b", "sky", "grass"};
+//
+//        for (int i = 0; i < str0.length; i++) {
+//            boolean flag = true;
+//            for (int j = 0; j < str0.length - 1; j++) {
+//                if (str0[j].charAt(0) > str0[j + 1].charAt(0)) {
+//                    String temp = str0[j];
+//                    str0[j] = str0[j + 1];
+//                    str0[j + 1] = temp;
+//                    flag = false;
+//                }
+//                if (flag == true) {
+//                    break;
+//                }
+//            }
+//        }
+//
+//        System.out.println("After sort:");
+//        for (int i = 0; i < str0.length; i++) {
+//            System.out.println(str0[i]);
+//        }
+//
+//        System.out.println();
+
+//        System.out.println(Arrays.toString(str0));
+
+        /*
+        Ввести предложение с клавиатуры, разобрать его на отдельные слова и напечатать их в столбик.
+        Словом считать последовательность букв, ограниченную пробелами, знаками препинания, началом или концом строки.
+         */
+
+//        String str1 = "No    matter where I am, my heart is always at home with you. " +
+//                "You are my Christmas, and I wish you to have the sweetest and most lovely holiday this year!";
+//        String[] str2 = str1.split("\\s*(\\s|,|!|\\.)\\s*");
+//
+//        for (int i = 0; i < str2.length; i++) {
+//            System.out.println(str2[i]);
+//        }
+
+        /*
         Заменить все вхождения одного слова в предложении другим словом.
          */
 
 //        Scanner scanner = new Scanner(System.in);
-        String oldWord = "Test";
-        String newWord = "mytest";
-
-        String str = "best testtete Test test";
-
-        for (int i = 0; i < str.length() - oldWord.length() + 1; i++) {
-            if (str.substring(i, i + oldWord.length()).toLowerCase().equals(oldWord.toLowerCase())) {
-                str = str.substring(0, i) + newWord + str.substring(i + oldWord.length());
-                i = i + newWord.length();
-            }
-        }
-
-        System.out.println(str);
+//        String oldWord = "Test";
+//        String newWord = "mytest";
+//
+//        String str = "best testtete Test test";
+//
+//        for (int i = 0; i < str.length() - oldWord.length() + 1; i++) {
+//            if (str.substring(i, i + oldWord.length()).toLowerCase().equals(oldWord.toLowerCase())) {
+//                str = str.substring(0, i) + newWord + str.substring(i + oldWord.length());
+//                i = i + newWord.length();
+//            }
+//        }
+//
+//        System.out.println(str);
 
 //        (str.charAt(i) == oldWord.charAt(0))
 
